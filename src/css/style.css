@@ -94,5 +94,26 @@ nav ul li a:hover{
 }
 
 .efeito-escrita{
+font-size:3rem;
+color:var(--text-color);
+font-family:"Cascadia code";
+width:max-content;
+margin:0 auto;
+overflow:hidden;
+white-space:nowrap; /*deixa tudo em linha¨¨*/
+border-right:2px solid #00ffff;
 
+animation:
+   digitando 4s steps(24) infinite alternate,
+    piscar 0.5s step-end infinite;
+text-shadow: 0 0 10px rgba(0,255,255,0.5);
+}
+@keyframes digitando{
+    0%, 10% {width:0;}
+    90%, 100% {width:24ch;}
+}
+@keyframes piscar{
+    from, to {border-color: transparent;}
+    50% {border-color:#00ffff;}
+    
 }
